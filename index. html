@@ -18,6 +18,10 @@ button{padding:12px;background:#e9b64e;border:0;border-radius:8px}
 </head>
 <body>
 <header>
+<div class="card">
+<h3>System Time</h3>
+<h2 id="clock">Loading...</h2>
+</div>
 <h1>GBT INTELLIGENCE</h1>
 <p>PERSONAL MARKET RESEARCH TERMINAL</p>
 </header>
@@ -77,6 +81,14 @@ document.getElementById("name").innerText="GOLD · XAUUSD";
 document.getElementById("price").innerText="$2,345.60";
 }
 }
+function updateClock(){
+  let now = new Date();
+  document.getElementById("clock").innerText =
+    now.toLocaleTimeString();
+}
+
+setInterval(updateClock, 1000);
+updateClock();
 </script>
 </body>
 </html>
