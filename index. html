@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GBT Intelligence</title>
+<style>
+body{margin:0;background:#0b1422;color:white;font-family:Arial;padding:18px}
+header{background:#172b43;padding:20px;border-radius:14px}
+h1{color:#f0bd59}
+.card{background:#172b43;padding:18px;margin:14px 0;border-radius:14px}
+.price{font-size:27px;font-weight:bold;color:#43d6a0}
+select{padding:12px;border-radius:8px;margin:5px}
+button{padding:12px;background:#e9b64e;border:0;border-radius:8px}
+.note{color:#ffcc77;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+<h1>GBT INTELLIGENCE</h1>
+<p>PERSONAL MARKET RESEARCH TERMINAL</p>
+</header>
+
+<div class="card">
+<h2>Market Overview</h2>
+<select id="market" onchange="changeMarket()">
+<option value="BTC">Bitcoin BTCUSDT</option>
+<option value="GOLD">Gold XAUUSD</option>
+</select>
+<select id="time">
+<option>1m</option>
+<option selected>5m</option>
+<option>15m</option>
+</select>
+</div>
+
+<div class="card">
+<h3 id="name">BITCOIN · BTCUSDT</h3>
+<div class="price" id="price">$67,420.50</div>
+<p class="note">Demo price only — Not live data</p>
+</div>
+
+<div class="card">
+<h2>Research Engine</h2>
+<p>15m Trend: Awaiting data</p>
+<p>Liquidity Sweep: Not evaluated</p>
+<p>Volume: Not evaluated</p>
+<h3>Final Decision: NO SIGNAL</h3>
+</div>
+
+<div class="card">
+<h2>Risk Planner</h2>
+<p>Risk per trade: 0.25%</p>
+<p>Daily loss limit: 0.50%</p>
+<p>Minimum Risk Reward: 1:2</p>
+</div>
+
+<div class="card">
+<h2>Backtest Checklist</h2>
+<p>✓ Test Bitcoin and Gold separately</p>
+<p>✓ Include fees and slippage</p>
+<p>✓ Record at least 100 trades</p>
+<p>✓ Review drawdown</p>
+</div>
+
+<p class="note">This is a demo dashboard. No live market connection or trading signals.</p>
+
+<script>
+function changeMarket(){
+let m=document.getElementById("market").value;
+if(m==="BTC"){
+document.getElementById("name").innerText="BITCOIN · BTCUSDT";
+document.getElementById("price").innerText="$67,420.50";
+}else{
+document.getElementById("name").innerText="GOLD · XAUUSD";
+document.getElementById("price").innerText="$2,345.60";
+}
+}
+</script>
+</body>
+</html>
